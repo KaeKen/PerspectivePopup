@@ -1,0 +1,206 @@
+*
+	font-size: 16px
+	font-family: 'Roboto', sans-serif
+body
+	margin: 0
+	padding: 0
+	background: rgb(245, 245, 245)
+	padding-top: 4rem
+	padding-bottom: 5rem
+.category-wrap
+	width: 100%
+	padding-top: 1rem
+	padding-bottom: 4rem
+	background: white
+	text-align: center
+	.warning
+		display: inline-block
+		text-align: center
+		padding: 2rem
+		font-size: .9rem
+		font-weight: 300
+		color: #ED5565
+		line-height: 24px
+		span
+			font-size: .9rem
+			color: rgb(180, 180, 180)
+	.head
+		text-align: center
+		padding: 2rem 0
+		padding-bottom: 4rem
+		box-sizing: border-box
+		position: relative
+		width: 980px
+		margin: auto
+		.title
+			font-size: 2rem
+			font-weight: 100
+			color: rgb(110, 110, 110)
+		.sub
+			margin-top: 8px
+			font-size: 1.1rem
+			font-weight: 100
+			color: rgb(150, 150, 150)
+	.secondary
+		padding: 4rem 0
+.desc
+	border-bottom: 1px solid rgb(231, 231, 231)
+	width: 980px
+	padding: 2rem
+	margin: auto
+	font-size: 1rem
+	font-weight: 300
+	color: rgb(100, 100, 100)
+.category-section
+	width: 840px
+	font-size: 0
+	margin: auto
+	display: block
+	padding-bottom: 2rem
+	.cat-card-static
+		display: inline-block
+		width: calc(100% / 4)
+		text-align: center
+		border: 2px solid rgb(240, 240, 240)
+		border-bottom: none
+		box-sizing: border-box
+		position: relative
+		padding: 3rem 0
+		cursor: pointer
+		z-index: 1
+		&:hover .cat-title
+			border-top: 1px solid rgb(190, 190, 190)
+		&:hover::before
+			box-shadow: 0 6px 8px 0 rgba(0,0,0,.08),0 1px 16px 0 rgba(0,0,0,.04),0 3px 5px -1px rgba(0,0,0,.06)
+		&:hover ~ div
+			z-index: 0
+		&:hover .cat-icon
+			box-shadow: none
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			display: block
+			top: 0
+			left: 0
+			background: white
+			transform: scale(1)
+			z-index: -1
+			transition-duration: 301ms
+			transition-timing-function: ease-out
+			transition-property: box-shadow, transform, z-index
+		&:nth-child(-n+4), &:nth-child(n+5):nth-child(-n+8)
+			border-right: none
+		&:nth-child(-n+4)
+			border-top: none
+		&:nth-child(1), &:nth-child(5)
+			border-left: none
+	.cat-card
+		display: inline-block
+		width: calc(100% / 4)
+		text-align: center
+		border: 2px solid rgb(240, 240, 240)
+		border-bottom: none
+		box-sizing: border-box
+		position: relative
+		padding: 3rem 0
+		cursor: pointer
+		z-index: 1
+		&:hover .cat-title
+			border-top: 1px solid rgb(190, 190, 190)
+		&:hover::before
+			box-shadow: 0 6px 8px 0 rgba(0,0,0,.08),0 1px 16px 0 rgba(0,0,0,.04),0 3px 5px -1px rgba(0,0,0,.06)
+		&:hover ~ div
+			z-index: 0
+		&:hover .cat-icon
+			box-shadow: none
+		&:hover:nth-child(1)::before
+			transform: scale(1.025) translate(-5px, -5px)
+		&:hover:nth-child(n+2):nth-child(-n+3)::before
+			transform: scale(1.025) translate(0, -6px)
+		&:hover:nth-child(4)::before
+			transform: scale(1.025) translate(5px, -5px)
+		&:hover:nth-child(5)::before
+			transform: scale(1.025) translate(-5px, 5px)
+		&:hover:nth-child(n+6):nth-child(-n+7)::before
+			transform: scale(1.025) translate(0, 6px)
+		&:hover:nth-child(8)::before
+			transform: scale(1.025) translate(5px, 5px)
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			display: block
+			top: 0
+			left: 0
+			background: white
+			transform: scale(1)
+			z-index: -1
+			transition-duration: 301ms
+			transition-timing-function: ease-out
+			transition-property: box-shadow, transform, z-index
+		&:nth-child(-n+4), &:nth-child(n+5):nth-child(-n+8)
+			border-right: none
+		&:nth-child(-n+4)
+			border-top: none
+		&:nth-child(1), &:nth-child(5)
+			border-left: none
+	.cat-icon
+		width: 4.5rem
+		height: 4.5rem
+		border: 1px dashed rgb(200, 200, 200)
+		background: rgb(253, 253, 253)
+		border-radius: 4px
+		margin: auto
+		box-sizing: border-box
+		display: block
+		box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, .04)
+		transition-duration: 301ms
+	.cat-title
+		border-top: 1px solid rgb(230, 230, 230)
+		display: inline-block
+		padding: 6px 0
+		margin-top: 24px
+		color: rgb(75, 75, 75)
+		font-weight: 400
+		box-sizing: border-box
+		transition: 301ms
+.choose-wrap
+	margin: 2rem 0
+	.title
+		font-size: 1.65rem
+		font-weight: 300
+		color: rgb(110, 110, 110)
+	.option
+		margin: 1.25rem 0
+		div
+			font-size: 1.25rem
+			font-weight: 300
+			padding: 3px 12px
+			border-radius: 4px
+			display: inline-block
+			margin: 0 .75rem
+			cursor: pointer
+			transition: 301ms
+			&:first-child
+				border: 1px dashed #4FC1E9
+				color: #3BAFDA
+				&:hover
+					border: 1px solid lighten(#4FC1E9, 20%)
+			&:last-child
+				border: 1px dashed #2ECC71
+				color: #2ABA66
+				&:hover
+					border: 1px solid lighten(#2ECC71, 20%)
+	.sub
+		display: inline-block
+		padding: 4px 12px
+		border-bottom: 1px solid rgb(240, 240, 240)
+		color: rgb(150, 150, 150)
+		font-weight: 300
+	.bye
+		margin-top: 4px
+		font-weight: 400
+		color: rgb(150, 150, 150)
